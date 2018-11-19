@@ -21,7 +21,7 @@
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
     <UseGlobalApplicationHostFile />
-    <TypeScriptToolsVersion>2.8</TypeScriptToolsVersion>
+    <TypeScriptToolsVersion>3.0</TypeScriptToolsVersion>
     <TypeScriptCompileBlocked>True</TypeScriptCompileBlocked>
     <Use64BitIISExpress />
     <NuGetPackageImportStamp>
@@ -47,6 +47,19 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <TypeScriptTarget>ES5</TypeScriptTarget>
+    <TypeScriptJSXEmit>React</TypeScriptJSXEmit>
+    <TypeScriptModuleKind />
+    <TypeScriptCompileOnSaveEnabled>False</TypeScriptCompileOnSaveEnabled>
+    <TypeScriptNoImplicitAny>False</TypeScriptNoImplicitAny>
+    <TypeScriptRemoveComments>False</TypeScriptRemoveComments>
+    <TypeScriptOutFile>Scripts\site\SerExtra.Web.js</TypeScriptOutFile>
+    <TypeScriptOutDir />
+    <TypeScriptGeneratesDeclarations>True</TypeScriptGeneratesDeclarations>
+    <TypeScriptNoEmitOnError>True</TypeScriptNoEmitOnError>
+    <TypeScriptSourceMap>True</TypeScriptSourceMap>
+    <TypeScriptMapRoot />
+    <TypeScriptSourceRoot />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -1001,6 +1014,10 @@
     <Content Include="Fonts\fontawesome-webfont.woff" />
     <Content Include="Fonts\fontawesome-webfont.ttf" />
     <Content Include="Fonts\fontawesome-webfont.eot" />
+    <Content Include="node_modules\%40types\react-dom\LICENSE" />
+    <Content Include="node_modules\%40types\react-dom\package.json" />
+    <Content Include="node_modules\%40types\react-dom\README.md" />
+    <Content Include="Modules\ExtraSamples\ReactSamplePage\Index.cshtml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -1082,6 +1099,30 @@
     <Content Include="Scripts\serenity\texts\serenity.texts.bn.json" />
     <Content Include="Scripts\serenity\Serenity.CoreLib.js.map" />
     <None Include="tsconfig.json" />
+    <TypeScriptCompile Include="Imports\ReactUI\ButtonPanel.tsx" />
+    <TypeScriptCompile Include="Imports\ReactUI\EditorRefs.tsx" />
+    <TypeScriptCompile Include="Imports\ReactUI\Forms\Categories.tsx" />
+    <TypeScriptCompile Include="Imports\ReactUI\Forms\Category.tsx" />
+    <TypeScriptCompile Include="Imports\ReactUI\Forms\CategoryLineBreak.tsx" />
+    <TypeScriptCompile Include="Imports\ReactUI\Forms\CategoryLink.tsx" />
+    <TypeScriptCompile Include="Imports\ReactUI\Forms\CategoryLinks.tsx" />
+    <TypeScriptCompile Include="Imports\ReactUI\Forms\CategoryTitle.tsx" />
+    <TypeScriptCompile Include="Imports\ReactUI\Forms\Dialog.tsx" />
+    <TypeScriptCompile Include="Imports\ReactUI\Forms\Field.tsx" />
+    <TypeScriptCompile Include="Imports\ReactUI\Forms\Form.tsx" />
+    <TypeScriptCompile Include="Imports\ReactUI\Forms\FormDataModel.tsx" />
+    <TypeScriptCompile Include="Imports\ReactUI\Forms\FormDataSource.tsx" />
+    <TypeScriptCompile Include="Imports\ReactUI\Forms\FormMode.tsx" />
+    <TypeScriptCompile Include="Imports\ReactUI\Forms\FormView.tsx" />
+    <TypeScriptCompile Include="Imports\ReactUI\Forms\Label.tsx" />
+    <TypeScriptCompile Include="Imports\ReactUI\Forms\PropertyField.tsx" />
+    <TypeScriptCompile Include="Imports\ReactUI\Forms\PropertyGrid.tsx" />
+    <TypeScriptCompile Include="Imports\ReactUI\Forms\PropertyTabs.tsx" />
+    <TypeScriptCompile Include="Imports\ReactUI\Forms\ValidateForm.tsx" />
+    <TypeScriptCompile Include="Imports\ReactUI\Forms\ValidationMark.tsx" />
+    <TypeScriptCompile Include="Imports\ReactUI\Q.React.ts" />
+    <TypeScriptCompile Include="Imports\ReactUI\Toolbar\CommonButtons.tsx" />
+    <TypeScriptCompile Include="Imports\ReactUI\Toolbar\Toolbar.tsx" />
     <TypeScriptCompile Include="Imports\ServerTypings\ExtraSamples.OrdersByCustomerReportRequest.ts">
       <DependentUpon>ServerTypings.tt</DependentUpon>
     </TypeScriptCompile>
@@ -1166,6 +1207,7 @@
     <TypeScriptCompile Include="Imports\_references.ts" />
     <TypeScriptCompile Include="Modules\ExtraSamples\MainGridInlineEditing\MainGridInlineEditingGrid.ts" />
     <TypeScriptCompile Include="Modules\ExtraSamples\Reports\OrdersByCustomer\OrdersByCustomerReportPanel.ts" />
+    <TypeScriptCompile Include="Modules\ExtraSamples\ReactSamplePage\Profile.tsx" />
     <TypeScriptCompile Include="Modules\_Ext\AuditLogViewer\AuditLogViewer.ts" />
     <TypeScriptCompile Include="Modules\_Ext\AuditLogViewer\AuditLogViewerDialog.ts" />
     <TypeScriptCompile Include="Modules\_Ext\AuditLog\AuditLogActionTypeFormatter.ts" />
@@ -1209,6 +1251,10 @@
     <TypeScriptCompile Include="node_modules\%40types\jquery.cookie\index.d.ts" />
     <TypeScriptCompile Include="node_modules\%40types\jquery.validation\index.d.ts" />
     <TypeScriptCompile Include="node_modules\%40types\jspdf\index.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40types\react-dom\index.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40types\react-dom\node-stream\index.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40types\react-dom\server\index.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40types\react-dom\test-utils\index.d.ts" />
     <TypeScriptCompile Include="node_modules\%40types\react\global.d.ts" />
     <TypeScriptCompile Include="node_modules\%40types\react\index.d.ts" />
     <TypeScriptCompile Include="node_modules\%40types\sortablejs\index.d.ts" />
@@ -2711,7 +2757,7 @@
     <NpmPath Condition="'$(NpmCmd)' == '' AND Exists('$(PROGRAMFILES)nodejs\npm.cmd')">$(PROGRAMFILES)nodejs\</NpmPath>
   </PropertyGroup>
   <Target Name="CreateInputsOutputs" BeforeTargets="BeforeBuild">
-    <CreateItem Include="Modules\**\*.ts;Imports\**\*.ts">
+    <CreateItem Include="Modules\**\*.ts*;Imports\**\*.ts*">
       <Output TaskParameter="Include" ItemName="CompileTSCInputs" />
     </CreateItem>
     <CreateItem Include="Content\**\*.less">

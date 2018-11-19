@@ -11,6 +11,10 @@ namespace SerExtra.ExtraSamples.Pages
         {
             return View(Views.ExtraSamples.MainGridInlineEditing.Index);
         }
+        public ActionResult ReactSamplePage()
+        {
+            return View(Views.ExtraSamples.ReactSamplePage.Index);
+        }
 
     }
 }
